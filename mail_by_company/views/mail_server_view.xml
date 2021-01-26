@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mail_server_form_inherit" model="ir.ui.view">
+            <field name="name">ir.mail_server.form</field>
+            <field name="model">ir.mail_server</field>
+            <field name="priority">20</field>
+            <field name="inherit_id" ref="base.ir_mail_server_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='sequence']" position="after">
+                    <field name="default_company" options="{'no_create':True, 'no_create_edit':True, 'no_open': True}" readonly="0"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
